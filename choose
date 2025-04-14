@@ -1,1 +1,24 @@
--- basic or advanced
+local Library = loadstring(game:HttpGetAsync("https://github.com/1dontgiveaf/Fluent-Renewed/releases/download/v1.0/Fluent.luau"))()
+local SaveManager = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/1dontgiveaf/Fluent-Renewed/refs/heads/main/Addons/SaveManager.luau"))()
+local InterfaceManager = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/1dontgiveaf/Fluent-Renewed/refs/heads/main/Addons/InterfaceManager.luau"))()
+ 
+local Window = Library:CreateWindow{
+    Title = "Herkle Hub -- OVERTAKE",
+    SubTitle = "by herkle berlington",
+    TabWidth = 100,
+    Size = UDim2.fromOffset(830, 450),
+    Resize = true,
+    MinSize = Vector2.new(470, 380),
+    Acrylic = true,
+    Theme = "Dark",
+    MinimizeKey = Enum.KeyCode.LeftControl
+}
+
+local Tabs = {
+    Main = Window:AddTab({ Title = "Main", Icon = "menu" })
+}
+Tabs.Main:CreateButton({Title = "Basic Version", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/decryp1/OVERTAKE/refs/heads/main/overtake%20BASIC"))() end})
+Tabs.Main:CreateParagraph("Aligned Paragraph", {Title = "BASIC VERSION", Content = "the Basic version works on every executor, use it for the simplest experience, with less features.", TitleAlignment = "Left", ContentAlignment = Enum.TextXAlignment.Left})
+Tabs.Main:CreateButton({Title = "Advanced Version", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/decryp1/OVERTAKE/refs/heads/main/overtake%20ADVANCED"))() end})
+Tabs.Main:CreateParagraph("Aligned Paragraph", {Title = "ADVANCED VERSION", Content = "the Advanced version has more features, but only works on really good executors. if it doesnt load or work, try Basic.", TitleAlignment = "Left", ContentAlignment = Enum.TextXAlignment.Left})
+Tabs.Main:CreateParagraph("Aligned Paragraph", {Title = "JOIN THE DISCORD!!!!!!", Content = "JOIN THE DISCORD! dsc.gg/herkle", TitleAlignment = "Middle", ContentAlignment = Enum.TextXAlignment.Center})
